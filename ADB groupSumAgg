@@ -10,11 +10,11 @@
 # COMMAND ----------
 
 # File location and type
-%run ./common
+dbutils.notebook.run("/Users/sector202020@outlook.com/common",60)
 
 # COMMAND ----------
 
-display(dfamit)
+display(commonfun())
 
 # COMMAND ----------
 
