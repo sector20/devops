@@ -10,19 +10,26 @@
 # COMMAND ----------
 
 # File location and type
-dbutils.notebook.run("/Users/sector202020@outlook.com/common",60)
+dffromotheernotebook = dbutils.notebook.run("/Users/sector202020@outlook.com/common",60,{"$X123" : "7"})
+#display(dffromotheernotebook.select('category','rating').where(dffromotheernotebook.Rating != 'NaN').groupBy('category').agg(sum('Rating')))
 
 # COMMAND ----------
 
-display(commonfun())
+# MAGIC %run /Users/sector202020@outlook.com/common $X123="4"
+
+# COMMAND ----------
+
+from pyspark.sql.functions import sum
+df = commonfun()
+display(df.select('category','rating').where(df.Rating != 'NaN').groupBy('category').agg(sum('Rating')))
 
 # COMMAND ----------
 
 # Create a view or table
 
-temp_table_name = "googleplaystore_csv"
+#temp_table_name = "googleplaystore_csv"
 
-df.createOrReplaceTempView(temp_table_name)
+#df.createOrReplaceTempView(temp_table_name)
 
 # COMMAND ----------
 
@@ -30,7 +37,7 @@ df.createOrReplaceTempView(temp_table_name)
 # MAGIC 
 # MAGIC /* Query the created temp table in a SQL cell */
 # MAGIC 
-# MAGIC select * from `googleplaystore_csv`
+# MAGIC #select * from `googleplaystore_csv`
 
 # COMMAND ----------
 
