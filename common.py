@@ -21,4 +21,4 @@ def commonfun():
     .option("header", first_row_is_header) \
     .option("sep", delimiter) \
     .load(file_location)
-  return dbutils.widgets.get("X123")
+  return dfamit
