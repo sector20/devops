@@ -5,8 +5,11 @@
 		"factoryName": {
 			"value": "amitdevadf18oct"
 		},
-		"AzureBlobStorage1_connectionString": {
-			"value": ""
+		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"value": "storagekey2"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://amit18octdev.vault.azure.net/"
 		}
 	}
 }
