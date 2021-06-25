@@ -60,3 +60,5 @@ jobs:
       - name: logout
         run: |
           az logout
+          az cache purge
+          az account clear          
