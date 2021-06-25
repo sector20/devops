@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: amitartifact
-          path: public/
+          path: linkedService/
   Testing:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
